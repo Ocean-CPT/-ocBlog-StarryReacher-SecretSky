@@ -3,9 +3,11 @@ home: true
 layout: BlogHome
 icon: home
 comment: false
+bgImage: /bg.png
 title: 首页
-tagline: 
+# bgImage: "src\.vuepress\public\bg.mp4"
 heroFullScreen: true
+hotReload: true # 热刷新 记得关
 
 # projects:
 #   - icon: project
@@ -53,4 +55,36 @@ footer: 自定义你的页脚文字
         height: 100vh !important;
     }
 }
+
+/* 隐藏竖屏时的内容 */
+@media screen and (orientation: portrait) {
+    body {
+    display: none;
+    }
+}
+/* 显示横屏时的内容 */
+@media screen and (orientation: landscape) {
+    body {
+    display: block;
+    }
+}
 </style>
+
+<script>
+    // 检测是否横屏
+    function checkOrientation() {
+      if (window.innerWidth > window.innerHeight) {
+        // 横屏
+        console.log("横屏模式");
+      } else {
+        // 竖屏
+        alert("请将您的设备旋转到横屏模式。");
+      }
+    }
+
+    // 初始检测
+    checkOrientation();
+
+    // 监听窗口大小变化以检测方向变化
+    window.addEventListener("resize", checkOrientation);
+</script>
