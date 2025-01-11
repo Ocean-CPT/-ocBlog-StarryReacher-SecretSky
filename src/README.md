@@ -4,11 +4,8 @@ layout: BlogHome
 icon: home
 comment: false
 title: 首页
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: 
 tagline: 
 heroFullScreen: true
-hotReload: true # 已开启热更新 记得关闭
 
 # projects:
 #   - icon: project
@@ -43,3 +40,17 @@ hotReload: true # 已开启热更新 记得关闭
 
 footer: 自定义你的页脚文字
 ---
+
+<style>
+.vp-navbar {
+    background-color: transparent !important;
+}
+
+.theme-container .vp-page {
+    padding-top: 0 !important;
+
+    .vp-blog-hero {
+        height: 100vh !important;
+    }
+}
+</style>
