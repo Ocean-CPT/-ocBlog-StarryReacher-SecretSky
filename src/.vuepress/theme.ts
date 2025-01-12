@@ -88,22 +88,38 @@ export default hopeTheme({
 
   // 此处开启了很多功能用于演示，你应仅保留用到的功能。
   markdown: {
+    // 是否启用对齐功能
     align: true,
+    // 是否启用属性功能
     attrs: true,
+    // 是否启用代码标签功能
     codeTabs: true,
+    // 是否启用组件功能
     component: true,
+    // 是否启用示例功能
     demo: false,
+    // 是否启用图表功能
     figure: true,
+    // 是否启用GitHub风格的Markdown
     gfm: true,
+    // 是否启用图片懒加载
     imgLazyload: true,
+    // 是否启用图片尺寸调整
     imgSize: true,
+    // 是否启用包含功能
     include: true,
+    // 是否启用标记功能
     mark: true,
+    // 是否启用PlantUML图表
     plantuml: true,
+    // 是否启用剧透功能
     spoiler: true,
+    // 是否启用样式化功能
     stylize: [
       {
+        // 匹配特定内容进行样式化替换
         matcher: "Recommended",
+        // 根据匹配结果替换为指定的标签和属性
         replacer: ({ tag }) => {
           if (tag === "em")
             return {
@@ -114,10 +130,15 @@ export default hopeTheme({
         },
       },
     ],
+    // 是否启用下标功能
     sub: true,
+    // 是否启用上标功能
     sup: true,
+    // 是否启用标签功能
     tabs: true,
+    // 是否启用任务列表功能
     tasklist: true,
+    // 是否启用v-pre指令，用于跳过编译
     vPre: true,
 
     // 取消注释它们如果你需要 TeX 支持
