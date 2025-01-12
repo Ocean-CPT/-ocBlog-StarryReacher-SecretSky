@@ -1,11 +1,12 @@
 ---
 home: true
-layout: BlogHome
+# layout: BlogHome
 icon: home
 comment: false
 bgImage: /bg.png
 title: 首页
-# bgImage: "src\.vuepress\public\bg.mp4"
+heroText: 跃穹的秘密天空
+tagline: StarryReacher-SecretSky
 heroFullScreen: true
 hotReload: true # 热刷新 记得关
 
@@ -40,7 +41,7 @@ hotReload: true # 热刷新 记得关
 #     desc: 自定义详细介绍
 #     link: https://你的自定义链接
 
-footer: 自定义你的页脚文字
+# footer: 自定义你的页脚文字
 ---
 
 <style>
@@ -57,11 +58,11 @@ footer: 自定义你的页脚文字
 }
 
 /* 隐藏竖屏时的内容 */
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
     body {
     display: none;
     }
-}
+} */
 /* 显示横屏时的内容 */
 @media screen and (orientation: landscape) {
     body {
@@ -71,6 +72,11 @@ footer: 自定义你的页脚文字
 </style>
 
 <script>
+    // 检测是否为移动端
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
     // 检测是否横屏
     function checkOrientation() {
       if (window.innerWidth > window.innerHeight) {
@@ -78,13 +84,16 @@ footer: 自定义你的页脚文字
         console.log("横屏模式");
       } else {
         // 竖屏
-        alert("请将您的设备旋转到横屏模式。");
+        alert("请将您的设备旋转到横屏模式以获得最佳用户体验。");
       }
     }
 
-    // 初始检测
-    checkOrientation();
+    // 标志变量，用于确保 checkOrientation 只执行一次
+    let orientationChecked = false;
 
-    // 监听窗口大小变化以检测方向变化
-    window.addEventListener("resize", checkOrientation);
-</script>
+    // 初始检测
+    if (isMobile() && !orientationChecked) {
+      checkOrientation();
+      orientationChecked = true;
+    }
+ </script>
