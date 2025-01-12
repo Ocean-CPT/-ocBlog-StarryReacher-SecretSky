@@ -26,50 +26,7 @@ export default hopeTheme({
 
   // 页脚
   footer: "默认页脚",
-  displayFooter: true,
-
-  // 博客相关
-  // blog: {
-  //   description: "一个前端开发者",
-  //   intro: "/intro.html",
-  //   medias: {
-  //     Baidu: "https://example.com",
-  //     BiliBili: "https://example.com",
-  //     Bitbucket: "https://example.com",
-  //     Dingding: "https://example.com",
-  //     Discord: "https://example.com",
-  //     Dribbble: "https://example.com",
-  //     Email: "mailto:info@example.com",
-  //     Evernote: "https://example.com",
-  //     Facebook: "https://example.com",
-  //     Flipboard: "https://example.com",
-  //     Gitee: "https://example.com",
-  //     GitHub: "https://example.com",
-  //     Gitlab: "https://example.com",
-  //     Gmail: "mailto:info@example.com",
-  //     Instagram: "https://example.com",
-  //     Lark: "https://example.com",
-  //     Lines: "https://example.com",
-  //     Linkedin: "https://example.com",
-  //     Pinterest: "https://example.com",
-  //     Pocket: "https://example.com",
-  //     QQ: "https://example.com",
-  //     Qzone: "https://example.com",
-  //     Reddit: "https://example.com",
-  //     Rss: "https://example.com",
-  //     Steam: "https://example.com",
-  //     Twitter: "https://example.com",
-  //     Wechat: "https://example.com",
-  //     Weibo: "https://example.com",
-  //     Whatsapp: "https://example.com",
-  //     Youtube: "https://example.com",
-  //     Zhihu: "https://example.com",
-  //     VuePressThemeHope: {
-  //       icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-  //       link: "https://theme-hope.vuejs.press",
-  //     },
-  //   },
-  // },
+  displayFooter: false,
 
   // 加密配置
   encrypt: {
@@ -190,11 +147,15 @@ export default hopeTheme({
     //   serverURL: "https://waline-comment.vuejs.press",
     // },
 
+    // 定义组件集合，用于在当前上下文中注册和使用指定的子组件
     components: {
+      // 指定需要注册的子组件名称，如Badge和VPCard，以便在当前组件中使用
       components: ["Badge", "VPCard"],
     },
 
+    // 配置图标相关设置，用于确定使用哪种图标库
     icon: {
+      // 指定使用的图标资产来源为fontawesome-with-brands，以便在应用中使用这些图标
       assets: "fontawesome-with-brands",
     },
 
