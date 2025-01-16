@@ -1,21 +1,36 @@
+// 导入 vuepress-theme-hope 主题
 import { hopeTheme } from "vuepress-theme-hope";
 
+// 导入导航栏配置
 import navbar from "./navbar.js";
+// 导入侧边栏配置
 import sidebar from "./sidebar.js";
 
+// 使用 vuepress-theme-hope 主题配置网站
 export default hopeTheme({
-  // hostname: "https://mister-hope.github.io",
+  // 定义一个名为hostname的属性，用于存储网站的主机名
+  hostname: "https://mister-hope.github.io",
+  // 允许全屏显示
   fullscreen: true,
 
-  // author: {
-  //   name: "Mr.Hope",
-  //   url: "https://mister-hope.com",
-  // },
+  /**
+   * 作者信息
+   * 包含作者的名称和网址，用于标识作者并提供访问作者网站的途径
+   */
+  author: {
+    // 作者名称
+    name: "Ocean_CPT",
+    // 作者网站URL
+    // url: "https://mister-hope.com",
+  },
 
+  // 网站logo
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  // GitHub仓库地址
+  repo: "Ocean-CPT/_ocBlog_StarryReacher-SecretSky",
 
+  // 文档目录
   docsDir: "src",
 
   // 导航栏
@@ -25,8 +40,9 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
-  displayFooter: false,
+  footer: "SpecialThakns<a href='https://example.com' target='_blank'>访问这里</a>",
+  // 是否显示页脚
+  displayFooter: true,
 
   // 加密配置
   encrypt: {
